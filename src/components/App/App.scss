@@ -1,0 +1,133 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  &__header {
+    position: relative;
+    margin-bottom: 12px;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    text-align: left;
+
+    &__date {
+      font-size: 26px;
+      font-weight: 700;
+      position: relative;
+      margin-top: 30px;
+
+      @media (max-width: 360px) {
+        font-size: 20px;
+      }
+    }
+
+    &__time-of-change {
+      font-size: 12px;
+      text-align: right;
+      font-weight: 600;
+      margin-top: 4px;
+      color: #ff4133;
+      height: 30px;
+      width: 100%;
+    }
+
+    &__work-place {
+      margin: 8px auto;
+      color: hsl(210, 60%, 50%);
+      letter-spacing: 1.5px;
+      font-size: 18px;
+      padding: 6px;
+      font-weight: 500;
+    }
+
+    &__status {
+      text-align: right;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 16px auto;
+    }
+
+    &__skills {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      padding: 4px;
+      box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, 0.1);
+
+      @media (max-width: 360px) {
+        font-size: 13px;
+        padding: 0;
+      }
+    }
+
+    &__first-accepted {
+      margin: 8px auto;
+
+      &__name {
+        color: green;
+      }
+
+      &__time {
+        font-size: 12px;
+        margin-left: 37%;
+        margin-top: -1.5%;
+
+        @media (max-width: 360px) {
+          font-size: 13px;
+          padding: 0;
+          margin: 0 auto;
+        }
+      }
+
+      &__recipients {
+        font-size: 10px;
+        font-weight: 600;
+        margin-top: -15px;
+        text-align: right;
+      }
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0pt;
+  margin-right: 16px;
+}
+
+li::before {
+  content: "•";
+  color: green;
+  margin-right: 6px;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+i {
+  margin-right: 6px;
+}
